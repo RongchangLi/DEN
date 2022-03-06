@@ -6,7 +6,7 @@ The official implementation of the paper '[Dynamic Information Enhancement for V
 
 ## Data preparation
 
-We  recommend to [TSM](https://github.com/mit-han-lab/temporal-shift-module) for dataset preparation.
+We  recommend to [TSM](https://github.com/mit-han-lab/temporal-shift-module) for dataset preparation. Noting that the data and file list paths in ***dataset_config.py*** should be correctly modified.
 
 
 
@@ -33,3 +33,23 @@ if adopt **2** clips × **3** crops with full resoluion (256×256) to ensemble p
 ```
 python test_models.py something --weights=your_checkpoint --test_segments=8 --test_crops=3 --batch_size=96 --comu_type motion_replace_A --add_se  -j 8 --twice_sample --full_res
 ```
+
+
+
+## Results
+
+The main results on Something-Something V1 are as follows:
+
+| Method    | resolution | n-frames        | top-1 |
+| :-------- | ---------- | --------------- | ----- |
+| DEN-Res50 | 224        | 8               | 47.7% |
+| DEN-Res50 | 256        | 8               | 48.4% |
+| DEN-Res50 | 256        | 8×3clips×3crops | 50.1% |
+
+
+
+The main results on Diving-48 are as follows:
+
+| Method    | resolution | n-frames | top-1  |
+| :-------- | ---------- | -------- | ------ |
+| DEN-Res50 | 224        | 16*2     | 40.46% |
