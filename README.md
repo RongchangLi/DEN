@@ -42,14 +42,14 @@ The main results on Something-Something V1 are as follows:
 
 | Method    | resolution | n-frames        | top-1 |
 | :-------- | ---------- | --------------- | ----- |
-| DEN-Res50 | 224        | 8               | 47.7% |
-| DEN-Res50 | 256        | 8               | 48.4% |
+| DEN-Res50 | 224        | 8×1clips×1crops | 47.7% |
+| DEN-Res50 | 256        | 8×1clips×1crops | 48.4% |
 | DEN-Res50 | 256        | 8×3clips×3crops | 50.1% |
 
 
 
 The main results on Diving-48 are as follows:
 
-| Method    | resolution | n-frames | top-1  |
-| :-------- | ---------- | -------- | ------ |
-| DEN-Res50 | 224        | 16*2     | 40.46% |
+| Method    | resolution | n-frames         | top-1  |
+| :-------- | ---------- | ---------------- | ------ |
+| DEN-Res50 | 224        | 16×2clips×1crops | 40.46% |
